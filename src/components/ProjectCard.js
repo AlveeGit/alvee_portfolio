@@ -17,7 +17,7 @@ const ProjectCard = ({
     <img
       src={image}
       alt={title}
-      className="rounded-t-lg w-full h-48 object-cover mb-4"
+      className="rounded-t-lg w-full h-60 object-cover mb-4"
     />
     <h3 className="text-xl font-semibold text-gray-800 dark:text-white">
       {title}
