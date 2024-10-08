@@ -4,6 +4,8 @@ import { Route, Routes } from "react-router-dom";
 import Layout from "./layout/Layout";
 import Home from "./pages/Home";
 import { useState } from "react";
+import Projects from "./pages/Projects";
+import Contact from "./pages/Contact";
 function App() {
   const [isDarkMode, setIsDarkMode] = useState(false);
 
@@ -15,6 +17,8 @@ function App() {
     <Layout isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode}>
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/projects" element={<Projects />} />
+        <Route path="/contact" element={<Contact />} />
       </Routes>
     </Layout>
   );

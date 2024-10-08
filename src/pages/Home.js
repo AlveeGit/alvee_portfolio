@@ -12,7 +12,7 @@ const Home = () => {
     <div className="relative">
       {/* Spider following the mouse */}
       {/* <Spider /> */}
-      <AnimatedCreature name="spider" />
+      {/* <AnimatedCreature name="spider" /> */}
       <section className="relative min-h-[calc(100vh-70px)] flex flex-col items-center justify-center bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 px-6">
         {/* Shooting Stars Galaxy Background */}
         <GalaxyBackground />

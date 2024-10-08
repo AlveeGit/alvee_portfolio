@@ -223,7 +223,7 @@ const AnimatedCreature = ({ name }) => {
         pointerEvents: "none",
         translate: "-50% -50%",
       }}
-      className="z-50"
+      className="z-30"
     >
       {renderCreature()}
     </motion.div>
