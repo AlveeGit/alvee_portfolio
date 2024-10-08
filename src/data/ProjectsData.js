@@ -1,6 +1,7 @@
 import influhire from "../assets/images/influhire.png";
 import menacheckout from "../assets/images/menacheckout.png";
 import menamedica from "../assets/images/menamedica.png";
+import builder from "../assets/images/builder.png";
 
 export const projectsData = [
   {
@@ -37,11 +38,11 @@ export const projectsData = [
     id: 4,
     title: "Builder",
     description:
-      "A healthcare app for patients and medical professionals, providing easy appointment booking, prescription management, and health tracking. Developed with Flutter and Firebase, MenaMedica features secure data storage and real-time updates for enhanced patient care.",
+      "A project management app for construction planning, scheduling, and tracking. Built with React, CSS, and JavaScript, it offers streamlined tools for efficient project execution.",
     tags: ["React", "CSS", "JavaScript"],
-    image: menamedica,
-    demoLink: "https://menamedica.com",
-    repoLink: "https://github.com/repo-link3",
+    image: builder,
+    demoLink: "https://builder-pro.netlify.app/",
+    repoLink: "https://github.com/AlveeGit/builder.ai",
   },
 ];
 
