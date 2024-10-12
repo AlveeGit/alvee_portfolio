@@ -4,15 +4,10 @@ import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
 import AnimatedShapes from "../components/AnimatedShapes";
 import GalaxyBackground from "../components/GalaxyBackground";
 import { TypeAnimation } from "react-type-animation";
-import Spider from "../components/Spider";
-import AnimatedCreature from "../components/AnimatedCreature";
 
 const Home = () => {
   return (
-    <div className="relative">
-      {/* Spider following the mouse */}
-      {/* <Spider /> */}
-      {/* <AnimatedCreature name="spider" /> */}
+    <div className="">
       <section className="relative min-h-[calc(100vh-70px)] flex flex-col items-center justify-center bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 px-6">
         {/* Shooting Stars Galaxy Background */}
         <GalaxyBackground />
@@ -100,14 +95,14 @@ const Home = () => {
           transition={{ duration: 0.8, delay: 1 }}
         >
           <a
-            href="#projects"
-            className="bg-indigo-500 text-white px-8 py-3 rounded-full hover:bg-indigo-600"
+            href="/projects"
+            className="bg-sky-500 text-white px-8 py-3 rounded-full hover:bg-sky-600"
           >
             View My Projects
           </a>
           <a
-            href="#contact"
-            className="border border-indigo-500 text-indigo-500 px-8 py-3 rounded-full hover:bg-indigo-500 hover:text-white"
+            href="?contact"
+            className="border border-sky-500 text-white px-8 py-3 rounded-full hover:bg-sky-500 hover:text-white"
           >
             Contact Me
           </a>

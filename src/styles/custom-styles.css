@@ -1,39 +1,23 @@
 :root {
   --theme-light: #fff;
   --theme-dark: #000;
+
+  /* Light mode gradient colors */
+  --light-gradient-start: #B7E2F9; /* sky-200 */
+  --light-gradient-end: #104D71; /* sky-900 */
+
 }
 
 [class="dark"] {
   --theme-light: #000;
   --theme-dark: #fff;
-}
 
-/* galaxy background image animation */
-@keyframes galaxy {
-  0% {
-    background-position: 0 0;
-  }
-  100% {
-    background-position: -2000px 0;
-  }
-}
-
-.galaxy-bg {
-  background-image: url("../assets/images/galaxy.jpg");
-  background-size: cover;
-  background-repeat: repeat-x;
-  animation: galaxy 100s linear infinite;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 0;
+    /* Swap to dark mode gradient */
+  --light-gradient-start: #0C4A6D;
+  --light-gradient-end: #030712;
 }
 
 /* Animated Background styles for GalaxyBackground */
-
-
 
 .star-container {
   position: absolute;
@@ -43,8 +27,14 @@
   height: 100%;
   overflow: hidden;
   z-index: 0;
-  background-color: var(--theme-light);
+  background: linear-gradient(
+    to bottom left,
+    var(--light-gradient-start),
+    var(--light-gradient-end)
+  );
 }
+
+  /* bg-gradient-to-bl from-sky-200 to-sky-900 dark:from-slate-700 dark:to-zinc-700 */
 
 .star {
   position: absolute;
@@ -74,8 +64,6 @@
     opacity: 0;
   }
 }
-
-
 
 /* Flutter Animation  */
 .flutter {

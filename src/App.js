@@ -3,18 +3,29 @@ import "./styles/custom-styles.css";
 import { Route, Routes } from "react-router-dom";
 import Layout from "./layout/Layout";
 import Home from "./pages/Home";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Projects from "./pages/Projects";
 import Contact from "./pages/Contact";
-function App() {
-  const [isDarkMode, setIsDarkMode] = useState(false);
 
-  const toggleDarkMode = () => {
-    setIsDarkMode(!isDarkMode);
-    document.documentElement.classList.toggle("dark", !isDarkMode);
+function App() {
+  const [theme, setTheme] = useState(localStorage.getItem("theme") || "dark");
+
+  useEffect(() => {
+    if (theme === "dark") {
+      document.documentElement.classList.add("dark");
+      localStorage.setItem("theme", "dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+      localStorage.setItem("theme", "light");
+    }
+  }, [theme]);
+
+  const toggleTheme = () => {
+    setTheme(theme === "light" ? "dark" : "light");
   };
+
   return (
-    <Layout isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode}>
+    <Layout isDarkMode={theme} toggleDarkMode={toggleTheme}>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/projects" element={<Projects />} />

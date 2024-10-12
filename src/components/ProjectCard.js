@@ -10,7 +10,7 @@ const ProjectCard = ({
   repoLink,
 }) => (
   <motion.div
-    className="p-4 rounded-lg shadow-lg bg-white dark:bg-gray-800"
+    className="p-4 rounded-lg shadow-lg bg-sky-200 dark:bg-gray-800 flex flex-col"
     whileHover={{ scale: 1.05 }}
     transition={{ duration: 0.3 }}
   >
@@ -22,7 +22,7 @@ const ProjectCard = ({
     <h3 className="text-xl font-semibold text-gray-800 dark:text-white">
       {title}
     </h3>
-    <p className="text-gray-600 dark:text-gray-300 mb-2">{description}</p>
+    <p className="text-gray-600 dark:text-gray-300 mb-2 flex-grow ">{description}</p>
     <div className="flex flex-wrap mb-4">
       {tags.map((tag) => (
         <span
@@ -36,7 +36,7 @@ const ProjectCard = ({
     <div className="flex justify-between items-center">
       <a
         href={demoLink}
-        className="text-blue-500 hover:text-blue-600"
+        className="text-sky-500 hover:text-blue-600"
         target="_blank"
         rel="noopener noreferrer"
       >

@@ -10,30 +10,30 @@ const Navbar = ({ toggleDarkMode, isDarkMode }) => {
   const isActiveLink = (path) => location.pathname === path;
 
   return (
-    <nav className="bg-white h-[70px] dark:bg-gray-900 shadow-md sticky top-0 dark:text-gray-100 ">
+    <nav className="bg-sky-100 min-h-[70px] dark:bg-gray-900 shadow-md sticky top-0 dark:text-gray-100 ">
       <div className="container mx-auto p-4 flex justify-between items-center">
         <h1 className="text-2xl font-bold">My Portfolio</h1>
         <div className="hidden md:flex space-x-6">
           <Link
             to="/"
-            className={`hover:text-indigo-500 font-semibold   ${
-              isActiveLink("/") ? "text-indigo-500 border-b-2 border-indigo-500" : ""
+            className={`hover:text-sky-500 font-semibold   ${
+              isActiveLink("/") ? "text-sky-500 border-b-2 border-sky-500" : ""
             }`}
           >
             Intro
           </Link>
           <Link
             to="/projects"
-            className={`hover:text-indigo-500 font-semibold  ${
-              isActiveLink("/projects") ? "text-indigo-500 border-b-2 border-indigo-500" : ""
+            className={`hover:text-sky-500 font-semibold  ${
+              isActiveLink("/projects") ? "text-sky-500 border-b-2 border-sky-500" : ""
             }`}
           >
             Projects
           </Link>
           <Link
             to="/contact"
-            className={`hover:text-indigo-500 font-semibold ${
-              isActiveLink("/contact") ? "text-indigo-500 border-b-2 border-indigo-500" : ""
+            className={`hover:text-sky-500 font-semibold ${
+              isActiveLink("/contact") ? "text-sky-500 border-b-2 border-sky-500" : ""
             }`}
           >
             Contact Me
@@ -53,15 +53,15 @@ const Navbar = ({ toggleDarkMode, isDarkMode }) => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
-          className="md:hidden bg-gray-100 dark:bg-gray-800 flex flex-col space-y-4 p-4 z-50"
+          className="md:hidden  bg-gray-100 dark:bg-gray-800 flex flex-col space-y-4 p-4 z-50 "
         >
-          <a href="/bio" className="hover:text-indigo-500">
-            Bio
+          <a href="/" className="hover:text-sky-500">
+            Intro
           </a>
-          <a href="/projects" className="hover:text-indigo-500">
+          <a href="/projects" className="hover:text-sky-500">
             Projects
           </a>
-          <a href="/contact" className="hover:text-indigo-500">
+          <a href="/contact" className="hover:text-sky-500">
             Contact
           </a>
           <button onClick={toggleDarkMode} className="p-2">
