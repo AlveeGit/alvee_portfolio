@@ -3,7 +3,6 @@ import { motion } from "framer-motion";
 import { projectsData, categories } from "../data/ProjectsData";
 import ProjectCard from "../components/ProjectCard";
 
-
 const Projects = () => {
   const [selectedCategory, setSelectedCategory] = useState("All");
 
@@ -17,7 +16,7 @@ const Projects = () => {
   };
 
   return (
-    <div className="bg-gradient-to-bl from-sky-200 to-sky-900 dark:from-sky-900 dark:to-gray-950 min-h-screen text-gray-900 dark:text-gray-100 ">
+    <div className="bg-gradient-to-bl from-sky-200 to-sky-900 dark:from-sky-900 dark:to-gray-950 min-h-screen text-gray-900 dark:text-gray-100">
       {/* Hero Section */}
       <section className="text-center py-10 px-6">
         <motion.h1
@@ -37,12 +36,12 @@ const Projects = () => {
           Discover our latest work and accomplishments.
         </motion.p>
         {/* Category Filter */}
-        <div className="flex justify-center space-x-4 mb-6">
+        <div className="flex justify-center space-x-2  mb-6 flex-wrap ">
           {categories.map((category, index) => (
             <button
               key={index}
               onClick={() => setSelectedCategory(category)}
-              className={`py-2 px-4 rounded-full text-sm ${
+              className={`py-2 px-4 mb-2 rounded-full text-sm ${
                 selectedCategory === category
                   ? "bg-sky-500 text-white"
                   : "bg-gray-200 dark:bg-gray-500 text-gray-700 dark:text-gray-300"
@@ -56,14 +55,12 @@ const Projects = () => {
 
       {/* Projects Grid */}
       <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 p-6 max-w-7xl mx-auto">
-        {filterProjects().map((project) => (
-          <ProjectCard key={project.id} {...project} />
+        {filterProjects().map((project, index) => (
+          <ProjectCard key={project.id} {...project} index={index} />
         ))}
       </section>
     </div>
   );
 };
-
-
 
 export default Projects;

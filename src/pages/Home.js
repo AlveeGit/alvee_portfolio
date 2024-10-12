@@ -89,7 +89,7 @@ const Home = () => {
 
         {/* Call-to-Action Buttons */}
         <motion.div
-          className="mt-10 flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-6"
+          className="mt-10 text-center flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-6"
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 1 }}
@@ -102,7 +102,7 @@ const Home = () => {
           </a>
           <a
             href="?contact"
-            className="border border-sky-500 text-white px-8 py-3 rounded-full hover:bg-sky-500 hover:text-white"
+            className="border border-sky-500 text-white px-8 py-3 rounded-full hover:bg-sky-500 hover:text-white  "
           >
             Contact Me
           </a>

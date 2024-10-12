@@ -23,7 +23,7 @@ export const projectsData = [
       "A project management app for construction planning, scheduling, and tracking. Built with React, CSS, and JavaScript, it offers streamlined tools for efficient project execution.",
     tags: ["React", "CSS", "JavaScript"],
     image: bot,
-    demoLink: "https://bot-pro.netlify.app/",
+    demoLink: "https://bot-alveegits-projects.vercel.app/",
     repoLink: "https://github.com/AlveeGit/bot",
   },
   {
@@ -43,7 +43,7 @@ export const projectsData = [
       "A project management app for construction planning, scheduling, and tracking. Built with React, CSS, and JavaScript, it offers streamlined tools for efficient project execution.",
     tags: ["React", "CSS", "JavaScript"],
     image: dking,
-    demoLink: "https://dking-solution.netlify.app/",
+    demoLink: "https://dking-solution.vercel.app/",
     repoLink: "https://github.com/AlveeGit/dking-solution",
   },
   {
