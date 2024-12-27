@@ -44,7 +44,7 @@ const Projects = () => {
               className={`py-2 px-4 mb-2 rounded-full text-sm ${
                 selectedCategory === category
                   ? "bg-sky-500 text-white"
-                  : "bg-gray-200 dark:bg-gray-500 text-gray-700 dark:text-gray-300"
+                  : "bg-gray-200 dark:bg-gray-900 text-gray-700 dark:text-gray-300"
               } focus:outline-none`}
             >
               {category}

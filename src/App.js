@@ -6,6 +6,7 @@ import Home from "./pages/Home";
 import { useEffect, useState } from "react";
 import Projects from "./pages/Projects";
 import Contact from "./pages/Contact";
+import Bio from "./pages/Bio";
 
 function App() {
   const [theme, setTheme] = useState(localStorage.getItem("theme") || "dark");
@@ -30,6 +31,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/projects" element={<Projects />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/bio" element={<Bio />} />
       </Routes>
     </Layout>
   );

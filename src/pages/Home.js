@@ -1,11 +1,28 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaTwitter, FaDownload } from "react-icons/fa";
 import AnimatedShapes from "../components/AnimatedShapes";
 import GalaxyBackground from "../components/GalaxyBackground";
 import { TypeAnimation } from "react-type-animation";
+import Skills from "../components/Skills";
+import Stats from "../components/Stats";
+import Testimonials from "../components/Testimonials";
+import ExperienceTimeline from "../components/ExperienceTimeline";
+import Awards from "../components/Awards";
+import EducationBackground from "../components/EducationBackground";
+import Resume from "../components/Resume";
 
 const Home = () => {
+  const handleDownloadResume = () => {
+    // Create a link element
+    const link = document.createElement("a");
+    link.href = "/assets/alvee_kabir_resume.pdf"; // Update path to start from public folder
+    link.download = "alvee_kabir_resume.pdf";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   return (
     <div className="">
       <section className="relative min-h-[calc(100vh-70px)] flex flex-col items-center justify-center bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 px-6">
@@ -18,7 +35,7 @@ const Home = () => {
         <div className="text-center max-w-2xl z-10">
           {/* Typing and Scrambling Text */}
           <motion.h1
-            className="text-4xl md:text-6xl font-bold mb-4"
+            className="text-4xl md:text-6xl font-bold mb-4 mt-40"
             initial={{ opacity: 0, y: -50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
@@ -61,7 +78,7 @@ const Home = () => {
             transition={{ duration: 0.8, delay: 0.6 }}
           >
             <a
-              href="https://github.com/"
+              href="https://github.com/AlveeGit"
               target="_blank"
               rel="noreferrer"
               className="hover:text-indigo-500"
@@ -69,7 +86,7 @@ const Home = () => {
               <FaGithub />
             </a>
             <a
-              href="https://linkedin.com/"
+              href="https://www.linkedin.com/in/alvee-kabir/"
               target="_blank"
               rel="noreferrer"
               className="hover:text-indigo-500"
@@ -77,7 +94,7 @@ const Home = () => {
               <FaLinkedin />
             </a>
             <a
-              href="https://twitter.com/"
+              href="https://x.com/AlveeKabir1"
               target="_blank"
               rel="noreferrer"
               className="hover:text-indigo-500"
@@ -96,17 +113,25 @@ const Home = () => {
         >
           <a
             href="/projects"
-            className="bg-sky-500 text-white px-8 py-3 rounded-full hover:bg-sky-600"
+            className="bg-sky-500 text-white px-8 py-3 rounded-full hover:bg-sky-600 flex items-center justify-center"
           >
             View My Projects
           </a>
-          <a
-            href="?contact"
-            className="border border-sky-500 text-white px-8 py-3 rounded-full hover:bg-sky-500 hover:text-white  "
+          <button
+            onClick={handleDownloadResume}
+            className="border border-sky-500 text-white px-8 py-3 rounded-full hover:bg-sky-500 hover:text-white flex items-center justify-center space-x-2"
           >
-            Contact Me
-          </a>
+            <FaDownload className="mr-2" />
+            <span>Download Resume</span>
+          </button>
         </motion.div>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 my-20">
+          <ExperienceTimeline />
+          <Skills />
+        </div>
+
+        {/* <EducationBackground />
+        <Resume /> */}
       </section>
     </div>
   );

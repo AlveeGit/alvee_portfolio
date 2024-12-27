@@ -23,9 +23,21 @@ const Navbar = ({ toggleDarkMode, isDarkMode }) => {
             Intro
           </Link>
           <Link
+            to="/bio"
+            className={`hover:text-sky-500 font-semibold ${
+              isActiveLink("/bio")
+                ? "text-sky-500 border-b-2 border-sky-500"
+                : ""
+            }`}
+          >
+            Bio
+          </Link>
+          <Link
             to="/projects"
             className={`hover:text-sky-500 font-semibold  ${
-              isActiveLink("/projects") ? "text-sky-500 border-b-2 border-sky-500" : ""
+              isActiveLink("/projects")
+                ? "text-sky-500 border-b-2 border-sky-500"
+                : ""
             }`}
           >
             Projects
@@ -33,11 +45,14 @@ const Navbar = ({ toggleDarkMode, isDarkMode }) => {
           <Link
             to="/contact"
             className={`hover:text-sky-500 font-semibold ${
-              isActiveLink("/contact") ? "text-sky-500 border-b-2 border-sky-500" : ""
+              isActiveLink("/contact")
+                ? "text-sky-500 border-b-2 border-sky-500"
+                : ""
             }`}
           >
             Contact Me
           </Link>
+
           <button onClick={toggleDarkMode} className="p-2">
             {isDarkMode ? <FaSun /> : <FaMoon />}
           </button>
@@ -53,17 +68,47 @@ const Navbar = ({ toggleDarkMode, isDarkMode }) => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
-          className="md:hidden  bg-gray-100 dark:bg-gray-800 flex flex-col space-y-4 p-4 z-50 "
+          className="md:hidden  bg-gray-100 dark:bg-gray-800 flex flex-col items-center space-y-4 p-4 z-50 "
         >
-          <a href="/" className="hover:text-sky-500">
+          <a
+            href="/"
+            className={`${
+              isActiveLink("/") ? "text-sky-500 border-b-2 border-sky-500" : ""
+            }`}
+          >
             Intro
           </a>
-          <a href="/projects" className="hover:text-sky-500">
+          <a
+            href="/bio"
+            className={`${
+              isActiveLink("/bio")
+                ? "text-sky-500 border-b-2 border-sky-500"
+                : ""
+            }`}
+          >
+            Bio
+          </a>
+          <a
+            href="/projects"
+            className={`${
+              isActiveLink("/projects")
+                ? "text-sky-500 border-b-2 border-sky-500"
+                : ""
+            }`}
+          >
             Projects
           </a>
-          <a href="/contact" className="hover:text-sky-500">
+          <a
+            href="/contact"
+            className={`${
+              isActiveLink("/contact")
+                ? "text-sky-500 border-b-2 border-sky-500"
+                : ""
+            }`}
+          >
             Contact
           </a>
+
           <button onClick={toggleDarkMode} className="p-2">
             {isDarkMode ? <FaSun /> : <FaMoon />}
           </button>
