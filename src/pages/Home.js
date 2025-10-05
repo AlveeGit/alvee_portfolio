@@ -120,10 +120,10 @@ const Home = () => {
               transition={{ duration: 0.8, delay: 1 }}
             >
               <a
-                href="/projects"
+                href="/works"
                 className="bg-sky-500 text-white px-8 py-3 rounded-full hover:bg-sky-600 flex items-center justify-center"
               >
-                View My Projects
+                View My Works
               </a>
               <button
                 onClick={handleDownloadResume}
