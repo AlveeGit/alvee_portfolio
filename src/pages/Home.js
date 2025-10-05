@@ -31,100 +31,111 @@ const Home = () => {
 
         {/* Animated Background Shapes */}
         <AnimatedShapes circle wave />
-
-        <div className="text-center max-w-2xl z-10">
-          {/* Typing and Scrambling Text */}
-          <motion.h1
-            className="text-4xl md:text-6xl font-bold mb-4 mt-40"
-            initial={{ opacity: 0, y: -50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-          >
-            <TypeAnimation
-              sequence={[
-                "",
-                500,
-                "Hi, I’m",
-                500,
-                "Hi, I’m \n Alvee Kabir",
-                2000,
-              ]}
-              wrapper="span"
-              speed={50}
-              style={{
-                whiteSpace: "pre-line",
-                height: "195px",
-                display: "block",
-              }}
-              repeat={Infinity}
+        <div className="grid grid-cols-1 md:grid-cols-2 items-center  ">
+          <div className="order-1 md:order-2 z-10 mt-8 md:mt-0">
+            <img
+              src="/assets/images/cv.png"
+              alt=""
+              className="w-full max-w-72 m-auto rounded-full border-gray-900 border "
             />
-          </motion.h1>
+          </div>
+          <div className="order-2 md:order-1">
+            <div className="text-center max-w-2xl z-10">
+              {/* Typing and Scrambling Text */}
+              <motion.h1
+                className="text-4xl md:text-6xl font-bold mb-4  mt-20 md:mt-40"
+                initial={{ opacity: 0, y: -50 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+              >
+                <TypeAnimation
+                  sequence={[
+                    "",
+                    500,
+                    "Hi, I’m",
+                    500,
+                    "Hi, I’m \n Alvee Kabir",
+                    2000,
+                  ]}
+                  wrapper="span"
+                  speed={50}
+                  style={{
+                    whiteSpace: "pre-line",
+                    height: "195px",
+                    display: "block",
+                  }}
+                  repeat={Infinity}
+                />
+              </motion.h1>
 
-          <motion.p
-            className="text-lg md:text-xl mb-8"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-          >
-            I’m a passionate developer creating modern and dynamic web
-            experiences.
-          </motion.p>
+              <motion.p
+                className="text-lg md:text-xl mb-8"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.8, delay: 0.4 }}
+              >
+                I’m a passionate developer creating modern and dynamic web
+                experiences.
+              </motion.p>
 
-          {/* Animated Social Icons */}
-          <motion.div
-            className="flex justify-center space-x-6 text-3xl"
-            initial={{ opacity: 0, scale: 0.5 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8, delay: 0.6 }}
-          >
-            <a
-              href="https://github.com/AlveeGit"
-              target="_blank"
-              rel="noreferrer"
-              className="hover:text-indigo-500"
+              {/* Animated Social Icons */}
+              <motion.div
+                className="flex justify-center space-x-6 text-3xl"
+                initial={{ opacity: 0, scale: 0.5 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.8, delay: 0.6 }}
+              >
+                <a
+                  href="https://github.com/AlveeGit"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="hover:text-indigo-500"
+                >
+                  <FaGithub />
+                </a>
+                <a
+                  href="https://www.linkedin.com/in/alvee-kabir/"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="hover:text-indigo-500"
+                >
+                  <FaLinkedin />
+                </a>
+                <a
+                  href="https://x.com/AlveeKabir1"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="hover:text-indigo-500"
+                >
+                  <FaTwitter />
+                </a>
+              </motion.div>
+            </div>
+
+            {/* Call-to-Action Buttons */}
+            <motion.div
+              className="mt-10 text-center flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-6"
+              initial={{ opacity: 0, y: 50 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 1 }}
             >
-              <FaGithub />
-            </a>
-            <a
-              href="https://www.linkedin.com/in/alvee-kabir/"
-              target="_blank"
-              rel="noreferrer"
-              className="hover:text-indigo-500"
-            >
-              <FaLinkedin />
-            </a>
-            <a
-              href="https://x.com/AlveeKabir1"
-              target="_blank"
-              rel="noreferrer"
-              className="hover:text-indigo-500"
-            >
-              <FaTwitter />
-            </a>
-          </motion.div>
+              <a
+                href="/projects"
+                className="bg-sky-500 text-white px-8 py-3 rounded-full hover:bg-sky-600 flex items-center justify-center"
+              >
+                View My Projects
+              </a>
+              <button
+                onClick={handleDownloadResume}
+                className="border border-sky-500 text-white px-8 py-3 rounded-full hover:bg-sky-500 hover:text-white flex items-center justify-center space-x-2"
+              >
+                <FaDownload className="mr-2" />
+                <span>Download Resume</span>
+              </button>
+            </motion.div>
+          </div>
         </div>
 
-        {/* Call-to-Action Buttons */}
-        <motion.div
-          className="mt-10 text-center flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-6"
-          initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 1 }}
-        >
-          <a
-            href="/projects"
-            className="bg-sky-500 text-white px-8 py-3 rounded-full hover:bg-sky-600 flex items-center justify-center"
-          >
-            View My Projects
-          </a>
-          <button
-            onClick={handleDownloadResume}
-            className="border border-sky-500 text-white px-8 py-3 rounded-full hover:bg-sky-500 hover:text-white flex items-center justify-center space-x-2"
-          >
-            <FaDownload className="mr-2" />
-            <span>Download Resume</span>
-          </button>
-        </motion.div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 my-20">
           <ExperienceTimeline />
           <Skills />

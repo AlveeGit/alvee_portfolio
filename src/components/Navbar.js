@@ -33,14 +33,14 @@ const Navbar = ({ toggleDarkMode, isDarkMode }) => {
             Bio
           </Link>
           <Link
-            to="/projects"
+            to="/works"
             className={`hover:text-sky-500 font-semibold  ${
-              isActiveLink("/projects")
+              isActiveLink("/works")
                 ? "text-sky-500 border-b-2 border-sky-500"
                 : ""
             }`}
           >
-            Projects
+            Works
           </Link>
           <Link
             to="/contact"
@@ -89,14 +89,14 @@ const Navbar = ({ toggleDarkMode, isDarkMode }) => {
             Bio
           </a>
           <a
-            href="/projects"
+            href="/works"
             className={`${
-              isActiveLink("/projects")
+              isActiveLink("/works")
                 ? "text-sky-500 border-b-2 border-sky-500"
                 : ""
             }`}
           >
-            Projects
+            Works
           </a>
           <a
             href="/contact"

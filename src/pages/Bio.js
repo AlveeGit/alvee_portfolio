@@ -72,14 +72,17 @@ const Bio = () => {
     ],
     workExperience: [
       {
-        title: "Junior Frontend Developer",
-        company: "DKingSolutions",
+        title: "Developer",
+        company: "AiNixIt",
         period: "2023 Oct - Present",
         responsibilities: [
           "Lead the frontend team in building modern web applications",
-          "Delivered 4+ mega projects on time using React.js and Next.js ",
+          "Delivered 6+ mega projects on time using React.js and Next.js ",
           "Collaborated with backend team to increase product performance",
           "Mentored inter developers and conducted code reviews",
+          "Worked on a range of projects, including eCommerce, dashboard, and admin portal",
+          "Mobile development using React Native",
+          "Developed 4+ mobile apps using React Native",
         ],
       },
       {

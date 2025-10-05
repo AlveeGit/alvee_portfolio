@@ -29,7 +29,7 @@ function App() {
     <Layout isDarkMode={theme} toggleDarkMode={toggleTheme}>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/projects" element={<Projects />} />
+        <Route path="/works" element={<Projects />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/bio" element={<Bio />} />
       </Routes>

@@ -9,7 +9,7 @@ const skillsData = [
   { name: "TypeScript", level: 70 },
   { name: "Redux", level: 80 },
   { name: "Tailwind CSS", level: 90 },
-  { name: "Bootstrap", level: 90 },
+  { name: "React Native", level: 70 },
   { name: "Git", level: 80 },
   { name: "CSS", level: 90 },
   { name: "HTML", level: 90 },
